@@ -10,7 +10,7 @@ $ npm install
 ## Наполнение тестовыми товарами
 
 ```sh
-$ node populate/populateProduct.js
+$ npm run populate
 ```
 ## Настройки путей к бд и токен для VK API
 
@@ -18,7 +18,8 @@ $ node populate/populateProduct.js
 {
   "dbAppURI": "mongodb://localhost/vkApiGate",
   "dbLogURI": "mongodb://localhost/vkApiGateLog",
-  "vkToken": ""
+  "vkToken": "токена полученный от vk",
+  "user_id": "id пользователя от которого работает текущий сервис"
 }
 ```
 
@@ -36,6 +37,8 @@ $ npm start
 | список                 | получить список товаров |
 | купить Название товара | купить указанный товар  |
 | статус                 | статус заказа           |
+
+
 
 
 

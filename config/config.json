@@ -1,5 +1,6 @@
 {
   "dbAppURI": "mongodb://localhost/vkApiGate",
   "dbLogURI": "mongodb://localhost/vkApiGateLog",
-  "vkToken": ""
+  "vkToken": "",
+  "user_id": ""
 }

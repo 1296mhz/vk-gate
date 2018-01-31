@@ -4,8 +4,10 @@ const _ = require('underscore');
 const moment = require('moment');
 const API = require('node-vk-bot-api');
 const config = require('../config/config.json')
-const interfaceVk = new API(config.vkToken);
 
+const request = require('request');
+const uploadImage = require('./modules/uploadImage').uploadImage
+const interfaceVk = new API(config.vkToken);
 moment.locale('ru');
 
 interfaceVk.command('список', async (ctx) => {
@@ -23,8 +25,17 @@ interfaceVk.command('список', async (ctx) => {
 
     for (var x = 0; x < product.length; x++) {
         setTimeout(function (y) {
-            interfaceVk.reply(ctx.peer_id, product[y].name + ", цена: " + product[y].price + " остаток: " + product[y].amount)
-        }, x * 500, x)
+
+            var _productObject = {
+                name: product[y].name,
+                price: product[y].price,
+                amount: product[y].amount,
+                image: product[y].image
+            }
+
+            uploadImage(ctx.peer_id, _productObject)
+
+        }, x * 1000, x)
     }
     ;
 });
@@ -36,7 +47,6 @@ interfaceVk.hears(/(купить)/, async (ctx) => {
     myString = _.rest(myString);
 
     myString = myString.join(' ');
-
 
     if (myString != null && myString != '') {
 

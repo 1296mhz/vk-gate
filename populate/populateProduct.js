@@ -11,14 +11,14 @@ const appleObj = {
     name: "Яблоко",
     price: 101,
     amount: 10,
-    image: '456239853_photo_75'
+    image: 'populate/images/apple.png'
 }
 
 const orangeObj = {
     name: "Апельсинка",
     price: 209,
     amount: 10,
-    image: '456239854_photo_75'
+    image: 'populate/images/orange.png'
 }
 
 async function upload(){
