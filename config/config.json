@@ -1,0 +1,5 @@
+{
+  "dbAppURI": "mongodb://localhost/vkApiGate",
+  "dbLogURI": "mongodb://localhost/vkApiGateLog",
+  "vkToken": ""
+}
