@@ -18,8 +18,8 @@ $ npm run populate
 {
   "dbAppURI": "mongodb://localhost/vkApiGate",
   "dbLogURI": "mongodb://localhost/vkApiGateLog",
-  "vkToken": "токена полученный от vk",
-  "user_id": "id пользователя от которого работает текущий сервис"
+  "token": "токена полученный от vk",
+  "user_id": "id пользователя текущего"
 }
 ```
 
